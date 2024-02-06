@@ -265,7 +265,7 @@ void resolve_double_black_right(rbtree *t, node_t *parent_p) {
       }
     } else {
       if (sibling_p->left->color == RBTREE_BLACK) {
-        // 경우 3 (반전): 형제의 왼쪽 자식이 검정
+        // 경우 3: 형제의 왼쪽 자식이 검정
         // 검빨 드리프트 후 경우 4로 이동
         rotate_ccw(t, sibling_p);
         sibling_p->color = RBTREE_RED;
